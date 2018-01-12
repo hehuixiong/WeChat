@@ -1,0 +1,19 @@
+/* pages/home/home.wxss */
+
+.slide-image{
+  width: 100%;
+}
+swiper {
+  height: 240px;
+}
+
+
+/** wxss **/
+/** 修改button默认的点击态样式类**/
+.button-hover {
+  background-color: #50bd07;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}

@@ -1,0 +1,34 @@
+<view class='container'>
+  <!-- 顶部 -->
+  <view class='menu'>
+    <view bindtap='switchover' data-name="in_theaters" data-index="0">
+      <text class='{{currentTab==0 ?"active":"" }}'>正在热映</text>
+    </view>
+    <view bindtap='switchover' data-name="coming_soon" data-index="1">
+      <text class='{{currentTab==1 ?"active":"" }}'>即将上映</text>
+    </view>
+    <view bindtap='switchover' data-name="top250" data-index="2">
+      <text class='{{currentTab==2 ?"active":""}}'>top250</text>
+    </view>
+  </view>
+  <!-- 数据列表 -->
+  <scroll-view scoll-y="true">
+    <view class='list'>
+      <navigator url="/pages/movieDetail/movieDetail?id={{item.id}}" hover-class="navigator-hover" class='list-item' wx:for="{{movieListData}}" wx:key="item.id">
+        <image src='{{item.images.large}}'></image>
+        <text>{{item.title}}</text>
+      </navigator>
+    </view>
+  </scroll-view>
+  <view class='loading-bottom' wx:if="{{isLoadingBottom}}">
+    <image src='/images/loadingbottom.gif' style='width:60px;height:60px;'></image>
+  </view>
+  <view class='bottomText'>
+    <text>{{bottomText}}</text>
+  </view>
+  <view class='loading' wx:if="{{isLoading}}">
+    <image src='/images/loading.gif' style='width:80rpx;height:80rpx;'></image>
+    <text>正在加载...</text>
+  </view>
+
+</view>

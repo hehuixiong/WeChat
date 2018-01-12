@@ -1,0 +1,39 @@
+<view class='container'>
+  <!-- 详情页面数据展示 -->
+  <scroll-view class='list' scoll-y="true" wx:if="{{!isLoading}}">
+    <!-- 顶部bg部分 -->
+    <view class='img-wrap' style='background:url({{movieDetailData.images.large}}) no-repeat;width: 100%;height: 200px;background-size: cover;'>
+      <view class='bg-text'>
+        <text>{{movieDetailData.title}}</text>
+        <text wx:if="{{isTextStatus}}">{{movieDetailData.original_title}}</text>
+        <text class='average'>{{movieDetailData.rating.average}}</text>
+        <text class='collect'>{{movieDetailData.collect_count}}人评价</text>
+      </view>
+    </view>
+    <!-- 内容部分 -->
+    <view class='content'>
+      <image src='{{movieDetailData.images.large}}'></image>
+      <view class='type'>
+        <text wx:for="{{movieDetailData.genres}}" wx:key="index">{{item}}<text wx:if="{{index != movieDetailData.genres.length-1}}">/</text></text>
+      </view>
+      <view class='casts'>
+        <text wx:for="{{movieDetailData.casts}}" wx:key="index">{{item.name}}<text wx:if="{{index != movieDetailData.casts.length-1}}">/</text></text>
+      </view>
+      <view class='wanna'>
+        <button>想看</button>
+        <button>看过</button>
+      </view>
+      <view class='tit'>
+        <text>{{movieDetailData.title}}</text>的剧情简介
+      </view>
+      <view class='details'>
+        <text>{{movieDetailData.summary}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- loading -->
+  <view class='loading' wx:if="{{isLoading}}">
+    <image src='/images/loading.gif' style='width:40px;height:40px;'></image>
+    <text>正在加载...</text>
+  </view>
+</view>

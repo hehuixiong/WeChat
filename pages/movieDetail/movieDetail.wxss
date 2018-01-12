@@ -1,0 +1,111 @@
+/* pages/movieDetail/movieDetail.wxss */
+
+.container {
+  height: 100%;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
+  width: 130px;
+  height: 90px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.loading image {
+  margin: 0 auto;
+  display: block;
+}
+
+.loading text {
+  color: #fff;
+  font-size: 16px;
+}
+
+
+.img-wrap .bg-text {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding-left: 138px;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+
+.bg-text text {
+  display: block;
+  color: #fff;
+  width: 218px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bg-text .average {
+  font-size: 38px;
+  padding-top: 20px;
+  display: inline;
+}
+
+.bg-text .collect {
+  display: inline;
+  font-size: 13px;
+  color: #9b9491;
+  padding-left: 4px;
+}
+
+.content {
+  position: relative;
+  padding-top: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.content image {
+  position: absolute;
+  top: -132px;
+  left: 14px;
+  width: 110px;
+  height: 154px;
+}
+.content .type{
+  font-size: 16px;
+}
+.content .casts{
+  font-size: 16px;
+}
+.content .wanna{
+  margin: 20px 0;
+  display: flex;
+}
+.content .wanna button{
+  width: 180px;
+  height: 32px;
+  border: #e98b27 solid 1px;
+  border-radius: 5px;
+  color: #e98b27;
+  text-align: center;
+  font-size: 16px;
+  line-height: 32px;
+  background: #fff;
+}
+.content .tit{
+  color: #b8b8b8;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.content .details{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.content .wanna .button-hover {
+  background-color: #e98b27;
+  color: #fff;
+}

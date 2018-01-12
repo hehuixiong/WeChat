@@ -1,0 +1,91 @@
+/* pages/movie/movie.wxss */
+
+.container {
+  height: 100%;
+}
+
+.menu {
+  z-index: 999;
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 32rpx;
+  position: fixed;
+  background: #fff;
+}
+.menu view{
+  text-align: center;
+  width: 33.333%;
+  height: 100%;
+  float: left;
+}
+
+.menu view text.active{
+color: #50bd07;
+border-bottom: 2px #50bd07 solid;
+padding-bottom: 4px;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
+  width: 260rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  padding-top: 30rpx;
+}
+.loading-bottom{
+   text-align: center; 
+   font-size: 32rpx;
+   line-height: 80rpx;
+}
+
+.bottomText{
+  font-size: 32rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #666;
+}
+.loading image {
+  margin: 0 auto;
+  display: block;
+}
+
+.loading text {
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.list {
+  padding-top: 92rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list .list-item {
+  text-align: center;
+  box-sizing: border-box;
+  width: 33.33%;
+  margin-bottom: 40rpx;
+}
+.list .list-item text{
+  display: block;
+  margin: 0 auto;
+  font-size: 32rpx;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  width: 220rpx;
+  text-align: left;
+  font-weight: 500;
+}
+
+.list .list-item image {
+  width: 220rpx;
+  height: 285.68rpx;
+  vertical-align: text-left;
+}

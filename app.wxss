@@ -1,0 +1,8 @@
+page{
+  height: 100%;
+  font-size: 32rpx;
+}
+
+image{
+  width: 100%;
+}
